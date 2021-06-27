@@ -36,6 +36,7 @@ while True:
             raise ValueError
     except ValueError:
         print("ERROR: Enter time in HH:MM or HH:MM:SS format")
+        
 // Convert the alarm time from [H:M] or [H:M:S] to seconds
 seconds_hms = [3600, 60, 1] // Number of seconds in an Hour, Minute, and Second
 alarm_seconds = sum([a*b for a,b in zip(seconds_hms[:len(alarm_time)], alarm_time)])
